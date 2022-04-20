@@ -4,6 +4,35 @@ namespace StoreWebAPI_Assingment.Models.User
 {
     public class UserEntity
     {
+        public UserEntity()
+        {
+
+        }
+
+        public UserEntity
+            (Guid id,
+            string firstName,
+            string lastName,
+            string emailAddress,
+            string password,
+            string phoneNumber,
+            string country,
+            string city,
+            string streetAddress,
+            string zipCode)
+        {
+            Id = id;
+            FirstName = firstName;
+            LastName = lastName;
+            EmailAddress = emailAddress;
+            Password = password;
+            PhoneNumber = phoneNumber;
+            Country = country;
+            City = city;
+            StreetAddress = streetAddress;
+            ZipCode = zipCode;
+        }
+
         [Key]
         public Guid Id { get; set; }
         [Required]

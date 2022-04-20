@@ -6,6 +6,27 @@ namespace StoreWebAPI_Assingment.Models.Product
 {
     public class ProductEntity
     {
+        public ProductEntity()
+        {
+
+        }
+
+        public ProductEntity
+            (Guid articleNumber,
+            string name,
+            string description,
+            decimal price,
+            Guid categoryId,
+            CategoryEntity category)
+        {
+            ArticleNumber = articleNumber;
+            Name = name;
+            Description = description;
+            Price = price;
+            CategoryId = categoryId;
+            Category = category;
+        }
+
         [Key]
         public Guid ArticleNumber { get; set; }
         [Required]

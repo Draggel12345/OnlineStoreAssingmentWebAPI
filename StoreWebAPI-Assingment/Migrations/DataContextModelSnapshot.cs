@@ -54,9 +54,6 @@ namespace StoreWebAPI_Assingment.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DueDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");
 

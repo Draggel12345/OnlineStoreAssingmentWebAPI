@@ -5,6 +5,27 @@ namespace StoreWebAPI_Assingment.Models.Order
 {
     public class OrderRowEntity
     {
+        public OrderRowEntity()
+        {
+
+        }
+
+        public OrderRowEntity
+            (Guid orderId,
+            string articleNumber,
+            string productName,
+            int quantity,
+            decimal productPrice,
+            OrderEntity order)
+        {
+            OrderId = orderId;
+            ArticleNumber = articleNumber;
+            ProductName = productName;
+            Quantity = quantity;
+            ProductPrice = productPrice;
+            Order = order;
+        }
+
         [Required]
         public Guid OrderId { get; set; }
         [Required]

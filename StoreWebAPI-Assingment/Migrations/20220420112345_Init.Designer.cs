@@ -12,7 +12,7 @@ using StoreWebAPI_Assingment.Models.Data;
 namespace StoreWebAPI_Assingment.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220419115023_init")]
+    [Migration("20220420112345_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -55,9 +55,6 @@ namespace StoreWebAPI_Assingment.Migrations
                     b.Property<string>("CustomerName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("DueDate")
-                        .HasColumnType("datetime2");
 
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("datetime2");

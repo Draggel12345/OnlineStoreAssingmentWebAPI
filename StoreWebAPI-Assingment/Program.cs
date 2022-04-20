@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using StoreWebAPI_Assingment.Models.Data;
+using StoreWebAPI_Assingment.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("LocalSql")));
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 var app = builder.Build();
 

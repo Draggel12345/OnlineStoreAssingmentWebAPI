@@ -5,6 +5,18 @@ namespace StoreWebAPI_Assingment.Models.Category
 {
     public class CategoryEntity
     {
+        public CategoryEntity()
+        {
+
+        }
+
+        public CategoryEntity(Guid id, string name, ICollection<ProductEntity> products)
+        {
+            Id = id;
+            Name = name;
+            Products = products;
+        }
+
         [Key]
         public Guid Id { get; set; }
         [Required]
