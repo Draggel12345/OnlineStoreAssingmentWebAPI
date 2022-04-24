@@ -7,7 +7,7 @@ using StoreWebAPI_Assingment.Services;
 namespace StoreWebAPI_Assingment.Controllers
 {
     [Route("api/[controller]")]
- 
+    [UseApiKey]
     [ApiController]
     public class UserController : ControllerBase
     {
@@ -19,7 +19,6 @@ namespace StoreWebAPI_Assingment.Controllers
         }
 
         [HttpPost]
-        [UseApiKey]
         public async Task<IActionResult> CreateUser(UserRequest request)
         {
             var user = await _service.CreateUserAsync(request);
@@ -38,7 +37,6 @@ namespace StoreWebAPI_Assingment.Controllers
         }
 
         [HttpGet("{id}")]
-        [UseApiKey]
         public async Task<IActionResult> GetUser(Guid id)
         {
             var user = await _service.GetUserAsync(id);
@@ -51,7 +49,6 @@ namespace StoreWebAPI_Assingment.Controllers
         }
 
         [HttpPut("{id}")]
-        [UseApiKey]
         public async Task<IActionResult> UpdateUser(Guid id, UserRequest request)
         {
             var user = await _service.UpdateUserAsync(id, request);
@@ -64,7 +61,6 @@ namespace StoreWebAPI_Assingment.Controllers
         }
 
         [HttpDelete("{id}")]
-        [UseApiKey]
         public async Task<IActionResult> DeleteUser(Guid id)
         {
             if (await _service.DeleteUserAsync(id))
