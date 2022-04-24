@@ -1,8 +1,7 @@
 ﻿namespace StoreWebAPI_Assingment.Models.Order
 {
-    public class OrderRowModel
+    public class OrderRowUpdate
     {
-        public string ArticleNumber { get; set; } = null!;
 
         public string ProductName { get; set; } = null!;
 

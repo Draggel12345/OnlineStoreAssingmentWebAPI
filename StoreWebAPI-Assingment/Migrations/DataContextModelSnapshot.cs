@@ -71,8 +71,8 @@ namespace StoreWebAPI_Assingment.Migrations
                     b.Property<Guid>("OrderId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("ArticleNumber")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid>("ArticleNumber")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ProductName")
                         .IsRequired()

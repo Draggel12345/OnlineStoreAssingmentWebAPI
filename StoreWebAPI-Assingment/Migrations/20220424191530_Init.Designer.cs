@@ -12,7 +12,7 @@ using StoreWebAPI_Assingment.Models.Data;
 namespace StoreWebAPI_Assingment.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20220420112345_Init")]
+    [Migration("20220424191530_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -73,8 +73,8 @@ namespace StoreWebAPI_Assingment.Migrations
                     b.Property<Guid>("OrderId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("ArticleNumber")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<Guid>("ArticleNumber")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ProductName")
                         .IsRequired()

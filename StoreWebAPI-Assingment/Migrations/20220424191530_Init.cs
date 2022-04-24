@@ -83,7 +83,7 @@ namespace StoreWebAPI_Assingment.Migrations
                 columns: table => new
                 {
                     OrderId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    ArticleNumber = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    ArticleNumber = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ProductName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
                     ProductPrice = table.Column<decimal>(type: "money", nullable: false)

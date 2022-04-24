@@ -12,7 +12,7 @@ namespace StoreWebAPI_Assingment.Models.Order
 
         public OrderRowEntity
             (Guid orderId,
-            string articleNumber,
+            Guid articleNumber,
             string productName,
             int quantity,
             decimal productPrice,
@@ -29,7 +29,7 @@ namespace StoreWebAPI_Assingment.Models.Order
         [Required]
         public Guid OrderId { get; set; }
         [Required]
-        public string ArticleNumber { get; set; } = null!;
+        public Guid ArticleNumber { get; set; }
         [Required]
         public string ProductName { get; set; } = null!;
         [Required]

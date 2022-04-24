@@ -1,8 +1,7 @@
 ﻿namespace StoreWebAPI_Assingment.Models.Product
 {
-    public class ProductModel
+    public class ProductRequest
     {
-        public Guid ArticleNumber { get; set; }
         public string Name { get; set; } = null!;
         public string Description { get; set; } = null!;
         public decimal Price { get; set; }
